@@ -120,3 +120,20 @@ function generateInputs() {
     
     // splash screen
     let about=document.getElementById("about").innerHTML=`ShopEase is a versatile and Customer-friendly web application designed to simplify shopping management. With its intuitive interface, customers can easily select the number of items they want to purchase and input their details. The application dynamically generates input fields based on customer selection, allowing them to specify item names, prices, and quantities.`;
+    //.onclick window to cancel splash screen 
+    window.onclick=(e)=>{
+    let spalsh=document.getElementById("splash");
+    if (e.target ===splash) {
+        splash.style.display="none";
+    }
+   }
+   // countdown for spash screen
+   let num=4;
+   let interval=setInterval(()=>{
+       num --;
+       if(num ===0){
+        clearInterval(interval);
+       document.getElementById("splash").style.display="none";
+       }
+   },1000)
+   
