@@ -1,3 +1,13 @@
+function update() {
+    let showOptions=document.querySelector(".showOptions");
+    for(let i=1;i<=1000;i++){
+    let option=document.createElement('option');
+    option.value=i;
+    option.text=i;
+    showOptions.appendChild(option)
+    }
+}
+update()
 function generateInputs() {
         const numberOfInputs = document.getElementById('numberOfInputs').value;
         const form = document.getElementById('inputForm');
@@ -16,7 +26,7 @@ function generateInputs() {
 
             const itemPrice = document.createElement('select');
             itemPrice.name = 'itemPrice' + (i + 1);
-            for (let price = 100; price <= 10000; price += 100) {
+            for (let price = 100; price <= 10000; price +=5) {
                 const option = document.createElement('option');
                 option.value = price;
                 option.text = price;
